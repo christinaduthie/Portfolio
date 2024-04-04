@@ -447,6 +447,7 @@ footer p {
   background-color: white;
   width: 500px;
   max-width: 80%;
+
 }
 
 .modal.active {
@@ -477,6 +478,7 @@ footer p {
 
 .modal-body {
   padding: 10px 15px;
+  margin: 0;
 }
 
 #overlay {
