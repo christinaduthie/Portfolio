@@ -266,6 +266,9 @@ section {
   position: relative;
 }
 
+#skills {
+  position: relative;
+}
 .about-containers {
   gap: 2rem;
   margin-bottom: 2rem;
@@ -345,7 +348,7 @@ section {
   
 }
 
-article {
+.article-skill {
   display: flex;
   width: 10rem;
   justify-content: space-around;
@@ -358,7 +361,9 @@ article {
 article .icon {
   cursor: default;
 }
-
+#skills {
+  position: relative;
+}
 /* PROJECTS SECTION */
 
 #projects {
@@ -497,4 +502,8 @@ footer p {
   opacity: 1;
   pointer-events: all;
 }
+
+
+
+
 
