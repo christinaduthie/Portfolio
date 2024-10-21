@@ -1,601 +1,578 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      <!--=============== SWIPER CSS ===============-->
-      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <!--=============== REMIXICONS ===============-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="mediaqueries.css" />
+  <!--=============== SWIPER CSS ===============-->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="mediaqueries.css" />
 
 
-      <title>Responsive card slider - Bedimcode</title>
-   </head>
-   <body>
-      <nav id="desktop-nav">
-         <div>
-           <h2 class="logo">Christina Duthie</h2>
-         </div>
-         <!-- <div><img src="assets/logo.png" height="90px" width="80px"></div>
+  <title>Testing</title>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+  <nav id="desktop-nav">
+    <div>
+      <h2 class="logo">Christina Duthie</h2>
+    </div>
+    <!-- <div><img src="assets/logo.png" height="90px" width="80px"></div>
          <div> -->
-           <ul class="nav-links">
-             <li ><a href="#about">About</a></li>
-             <li><a href="#skills">Skills</a></li>
-             <li><a href="#project">Projects</a></li>
-             <li><a href="#contact">Contact</a></li>
-           </ul>
-         </div>
-       </nav>
-       <nav id="hamburger-nav">
-         <div class="logo">Christina Duthie</div>
-         <div class="hamburger-menu">
-           <div class="hamburger-icon" onclick="toggleMenu()">
-             <span></span>
-             <span></span>
-             <span></span>
-           </div>
-           <div class="menu-links">
-             <li><a href="#about" onclick="toggleMenu()">About</a></li>
-             <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-           </div>
-         </div>
-       </nav>
-       <section id="profile">
-      
-         <div class="section__text">
-           <p class="section__text__p1">Hello, I'm</p>
-           <h1 class="title">Christina Duthie</h1>
-           <p class="section__text__p2">Computer Science Enthusiast</p>
-           <div class="btn-container">
-             <button
-               class="btn btn-color-2" style="border-radius: 5px;"
-               onclick="window.open('./assets/resume.pdf')">
-               Resume
-             </button>
-             <button class="btn btn-color-1" style="border-radius: 5px;" onclick="location.href='./#project'">
-               Projects
-             </button>
-           </div>
-           <div id="socials-container">
-             <img
-               src="./assets/linkedin.png"
-               alt="My LinkedIn profile"
-               class="icon"
-               onclick="location.href='https://www.linkedin.com/in/christina-duthie/'"
-             />
-             <img
-               src="./assets/github.png"
-               alt="My Github profile"
-               class="icon"
-               onclick="location.href='https://github.com/christinaduthie'"
-             />
-           </div>
-         </div>
-         <div class="section__pic-container">
-           <img src="./assets/profile-pic.png"  />
-         </div>
-       </section>
-       <section id="about">
-         <p class="section__text__p1">Get To Know More</p>
-         <h1 class="title">About Me</h1>
-         <div class="section-container">
-   
-           <div class="about-details-container">
-               <div class="text-container">
-                   <p style="text-align: center;">
-                       I am currently pursuing my Masters in Computer Science in University of Texas at San Antonio. I aim to learn and land a stimulating effort in the field of computer science where I can apply my programming
-                       skills, analytical thinking, and enthusiasm for technology to help create new and cutting-edge solutions.
-                   </p>
-                 </div>
-             <div class="about-containers">
-               <div class="details-container">
-                 <img
-                   src="./assets/education.png"
-                   alt="Education icon"
-                   class="icon"
-                 />
-                 <h3>Education</h3>
-                 <p>B.tech Computer Science and Engineering<br />MS Computer Science (ongoing)</p>
-                 <div class="modelContainer" >
-                   <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;" >Details>></div>
-                   <div class="modal" id="modal">
-                     <div class="modal-header">
-                       <div class="title">Education</div>
-                       <button data-close-button class="close-button">&times;</button>
-                     </div>
-                     <div class="modal-body">
-                       Undergraduate:<br>
-                       Bachelor of Technology in Computer Science and Engineering<br>
-                       Karunya Institute of Technology and Sciences, Coimbatore, India<br>
-                       2019 - 2023<br>
-                       Gpa: 8.11/10<br>
-                     </div>
-                   </div>
-                   <div id="overlay"></div>
-                 </div>
-         
-               </div>
-               <div class="details-container">
-                   <img
-                     src="./assets/experience.png"
-                     alt="Experience icon"
-                     class="icon"
-                   />
-                   <h3>Internship</h3>
-                   <p>Feb - Mar 2023 <br />Software Developer Trainee<br />ITOI Technologies</p> 
-                   <div class="modelContainer" >
-                     <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;" >Details>></div>
-                     <div class="modal" id="modal">
-                       <div class="modal-header">
-                         <div class="title">Software Developer Trainee</div>
-                         <button data-close-button class="close-button">&times;</button>
-                       </div>
-                       <div class="modal-body">
-                         Feb - Mar 2023<br>
-                         Into Impact Network Foundation<br>
-                       </div>
-                     </div>
-                     <div id="overlay"></div>
-                   </div>
-                 </div>
-                 <div class="details-container">
-                   <img
-                     src="./assets/cs.png"
-                     alt="Experience icon"
-                     class="icon"
-                   />
-                   <h3>Volunteer</h3>
-                   <p>January - Present <br />Backend Javascript Developer<br />Scooter Lab - UTSA</p> 
-                   <div class="modelContainer" >
-                     <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;" >Details>></div>
-                     <div class="modal" id="modal">
-                       <div class="modal-header">
-                         <div class="title">Backend Javascript Developer</div>
-                         <button data-close-button class="close-button">&times;</button>
-                       </div>
-                       <div class="modal-body">
-                         January - Present<br>
-                         Scooter Lab - UTSA<br>
-                         Scooter Lab is an initiative to build a micro mobility research testbed, of
-   dockless e-scooter vehicles that facilitates the real-time gathering of detailed
-   research data. My role involves developing front-end features and back-end services to streamline data management and analysis of the research data, contributing significantly to the advancement of sustainable urban mobility solutions.<br>
-                      
-                       </div>
-                     </div>
-                     <div id="overlay"></div>
-                   </div>
-                 </div>
-             </div>
-             
-             
-   
-             
-           </div>
-         </div>
-         <img
-           src="./assets/arrow.png"
-           alt="Arrow icon"
-           class="icon arrow"
-           onclick="location.href='./#skills'"
-         />
-       </section>
-       
-       <section id="skills">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Skills</h1>
-        <div class="experience-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <h2 class="experience-sub-title">Web Development</h2>
-              <div class="article-container">
-                <article class = "article-skill">
-                  <img
-                    src="./assets/html.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>HTML</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-                <article class = "article-skill">
-                  <img
-                    src="./assets/css.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>CSS</h3>
-                    <p>Experienced</p>
-                  </div>
-                </article>
-               
-                <article class = "article-skill">
-                  <img
-                    src="./assets/java-script.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>JavaScript</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
-                <article class = "article-skill">
-                  <img
-                    src="./assets/checkmark.png"
-                    alt="Experience icon"
-                    class="icon"/>
-                  <div>
-                    <h3>TypeScript</h3>
-                    <p>Basic</p>
-                  </div>
-                </article>
-                <article class = "article-skill">
-                  <img
-                    src="./assets/react.png"
-                    alt="Experience icon"
-                    class="icon"
-                  />
-                  <div>
-                    <h3>React</h3>
-                    <p>Intermediate</p>
-                  </div>
-                </article>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#project">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Christina Duthie</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+
+    <div class="section__text ">
+      <p class="section__text__p1 ">Hello, I'm</p>
+      <h1 class="title">Christina Duthie</h1>
+      <p class="section__text__p2">Computer Science Enthusiast</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" style="border-radius: 5px;" onclick="window.open('./assets/resume.pdf')">
+          Resume
+        </button>
+        <button class="btn btn-color-1" style="border-radius: 5px;" onclick="location.href='./#project'">
+          Projects
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/christina-duthie/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/christinaduthie'" />
+      </div>
+    </div>
+    <div class="section__pic-container  ">
+      <img src="./assets/profile-pic.png" />
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+
+      <div class="about-details-container">
+        <div class="text-container">
+          <p style="text-align: center;">
+            I am currently pursuing my Masters in Computer Science in University of Texas at San Antonio. I aim to learn
+            and land a stimulating effort in the field of computer science where I can apply my programming
+            skills, analytical thinking, and enthusiasm for technology to help create new and cutting-edge solutions.
+          </p>
+        </div>
+        <div class="about-containers">
+          <div class="details-container slide-in-left">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.tech Computer Science and Engineering<br />MS Computer Science (ongoing)</p>
+            <div class="modelContainer">
+              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
+                Details>></div>
+              <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="title">Education</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                  Undergraduate:<br>
+                  Bachelor of Technology in Computer Science and Engineering<br>
+                  Karunya Institute of Technology and Sciences, Coimbatore, India<br>
+                  2019 - 2023<br>
+                  Gpa: 8.11/10<br>
+                </div>
               </div>
-              <h2 class="experience-sub-title" style="margin-top: 30px;">Artificial Inteligence</h2>
-              <div class="article-container">
-                  <article class = "article-skill">
-                      <img
-                        src="./assets/python.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Python</h3>
-                        <p>Intermediate</p>
-                      </div>
-                    </article>
-                    <article class = "article-skill">
-                      <img
-                        src="./assets/data-science.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Data Science</h3>
-                        <p>Intermediate</p>
-                      </div>
-                    </article>
-                    <article class = "article-skill">
-                      <img
-                        src="./assets/machinelearning.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Machine Learning</h3>
-                        <p>Intermediate</p>
-                      </div>
-                    </article>
-                    
-                    <article class = "article-skill">
-                      <img
-                        src="./assets/deep-learning.png"
-                        alt="Experience icon"
-                        class="icon"
-                      />
-                      <div>
-                        <h3>Deep Learning</h3>
-                        <p>Intermediate</p>
-                      </div>
-                    </article>
-  
-              </div>
+              <div id="overlay"></div>
             </div>
-            
+
           </div>
-        </div>
-        <img
-          src="./assets/arrow.png"
-          alt="Arrow icon"
-          class="icon arrow"
-          onclick="location.href='./#project'"
-        />
-      </section>
-      <br>
-      <p class="section__text__p1" id="project">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
-     
-      <section class="container">
-        <div class="card__container swiper">
-           <div class="card__content">
-              <div class="swiper-wrapper">
-               
-     
-                 <article class="card__article swiper-slide">
-                    <section class="grid--container">
-
-                       <!-- 1 -->
-                       <div class="grid--cell">
-                          <article class="grid--item">
-                             
-                             <div class="preview--container">				
-                                <a href="#" class="preview-image--container">
-                                   <div class="preview-image"></div>
-                                </a>
-                                
-                                <div class="meta--container">
-                                   <a href="#" class="issue">Issue XX</a>
-                                   <a href="#" class="page">Deep Learning</a>
-                                </div>				
-                             </div>
-                             
-                             <div class="content--container">
-                                <div class="title--container">
-                                   <a class="title--text" href="#">Malware Prediction App</a>
-                                </div>
-                                
-                                <div class="tags--overflow-container">
-                                   <ul class="tags--container">
-                                      <li><a href="#" class="tag">Python</a></li>
-                                      <li><a href="#" class="tag">Streamlit</a></li>
-                                      <li><a href="#" class="tag">CNN</a></li>
-                                      <li><a href="#" class="tag">EfficientNet</a></li>
-                                      
-                                      <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
-                                   </ul>
-                                </div>
-                    
-                                <div class="hover--options">
-                                   
-                                   <a href="#" class="series button">
-                                      <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                                      <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>		
-                                   </a>
-                                   
-                                   <a href="#" class="latest button">
-                                      <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                                      <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>	
-                                   </a>
-                                   
-                                   <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
-                                </div>
-                             </div>
-                    
-                          </article>
-                       </div> </section>
-                 </article>
-                 <article class="card__article swiper-slide">
-                   <section class="grid--container">
-
-                      <!-- 1 -->
-                      <div class="grid--cell">
-                         <article class="grid--item">
-                            
-                            <div class="preview--container">				
-                               <a href="#" class="preview-image--container">
-                                <div class="preview-image" style="background-image: url('https://www.nyckel.com/assets/images/functions/sms.webp');"></div>
-                              </a>
-                               
-                               <div class="meta--container">
-                                  <a href="#" class="issue">Issue XX</a>
-                                  <a href="#" class="page">Machine Learning</a>
-                               </div>				
-                            </div>
-                            
-                            <div class="content--container">
-                               <div class="title--container">
-                                  <a class="title--text" href="#">Sentiment Classifier App</a>
-                               </div>
-                               
-                               <div class="tags--overflow-container">
-                                  <ul class="tags--container">
-                                     <li><a href="#" class="tag">Python</a></li>
-                                     <li><a href="#" class="tag">Streamlit</a></li>
-                                     <li><a href="#" class="tag">Nlp</a></li>
-                                     <li><a href="#" class="tag">Random Forest</a></li>
-                                     <li><a href="#" class="tag">seaborn</a></li>
-                                     <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
-                                  </ul>
-                               </div>
-                   
-                               <div class="hover--options">
-                                  
-                                  <a href="#" class="series button">
-                                     <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>		
-                                  </a>
-                                  
-                                  <a href="#" class="latest button">
-                                     <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>	
-                                  </a>
-                                  
-                                  <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
-                               </div>
-                            </div>
-                   
-                         </article>
-                      </div> </section>
-                </article>
-                <article class="card__article swiper-slide">
-                   <section class="grid--container">
-
-                      <!-- 1 -->
-                      <div class="grid--cell">
-                         <article class="grid--item">
-                            
-                            <div class="preview--container">				
-                               <a href="#" class="preview-image--container">
-                                <div class="preview-image" style="background-image: url('https://cdn.wallpaperdirect.com/asset/img/product/185728/full/isabelle-boxall-flight-of-monarchs-slate-wallpaper-0@lg.webp');"></div>
-                               </a>
-                               
-                               <div class="meta--container">
-                                  <a href="#" class="issue">Issue XX</a>
-                                  <a href="#" class="page">Data Science</a>
-                               </div>				
-                            </div>
-                            
-                            <div class="content--container">
-                               <div class="title--container">
-                                  <a class="title--text" href="#">Decline in Pollinators</a>
-                               </div>
-                               
-                               <div class="tags--overflow-container">
-                                  <ul class="tags--container">
-                                     <li><a href="#" class="tag">Python</a></li>
-                                     <li><a href="#" class="tag">API</a></li>
-                                     <li><a href="#" class="tag">Streamlit</a></li>
-                                     <li><a href="#" class="tag">Seaborn</a></li>
-                                     <li><a href="#" class="tag">Folium</a></li>
-                                     <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
-                                  </ul>
-                               </div>
-                   
-                               <div class="hover--options">
-                                  
-                                  <a href="#" class="series button">
-                                     <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>		
-                                  </a>
-                                  
-                                  <a href="#" class="latest button">
-                                     <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>	
-                                  </a>
-                                  
-                                  <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
-                               </div>
-                            </div>
-                   
-                         </article>
-                      </div> </section>
-                </article>
-                <article class="card__article swiper-slide">
-                   <section class="grid--container">
-
-                      <!-- 1 -->
-                      <div class="grid--cell">
-                         <article class="grid--item">
-                            
-                            <div class="preview--container">				
-                               <a href="#" class="preview-image--container">
-                                <div class="preview-image" style="background-image: url('https://bsmart.agency/wp-content/uploads/2023/11/E-commerce-Web-Development-Services.webp');"></div>
-                               </a>
-                               
-                               <div class="meta--container">
-                                  <a href="#" class="issue">Issue XX</a>
-                                  <a href="#" class="page">Full Stack</a>
-                               </div>				
-                            </div>
-                            
-                            <div class="content--container">
-                               <div class="title--container">
-                                  <a class="title--text" href="#">E-commerce Website</a>
-                               </div>
-                               
-                               <div class="tags--overflow-container">
-                                  <ul class="tags--container">
-                                     <li><a href="#" class="tag">React</a></li>
-                                     <li><a href="#" class="tag">HTML</a></li>
-                                     <li><a href="#" class="tag">Css</a></li>
-                                     <li><a href="#" class="tag">Javascript</a></li>
-                                     <li><a href="#" class="tag">Node.js</a></li>
-                                     <li><a href="#" class="tag">MongoDB</a></li>
-                                     <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
-                                  </ul>
-                               </div>
-                   
-                               <div class="hover--options">
-                                  
-                                  <a href="#" class="series button">
-                                     <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>		
-                                  </a>
-                                  
-                                  <a href="#" class="latest button">
-                                     <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                                     <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>	
-                                  </a>
-                                  
-                                  <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
-                               </div>
-                            </div>
-                   
-                         </article>
-                      </div> </section>
-                </article>
-                
+          <div class="details-container slide-in-right ">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Internship</h3>
+            <p>Feb - Mar 2023 <br />Software Developer Trainee<br />ITOI Technologies</p>
+            <div class="modelContainer">
+              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
+                Details>></div>
+              <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="title">Software Developer Trainee</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                  Feb - Mar 2023<br>
+                  Into Impact Network Foundation<br>
+                </div>
               </div>
-           </div>
+              <div id="overlay"></div>
+            </div>
+          </div>
+          <div class="details-container slide-in-left">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Internship</h3>
+            <p>June - July 2024 <br />Software Developer Trainee<br />Numentica UI</p>
+            <div class="modelContainer">
+              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
+                Details>></div>
+              <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="title">Software Developer Trainee</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                  Feb - Mar 2023<br>
+                  Numentica Ui<br>
+                </div>
+              </div>
+              <div id="overlay"></div>
+            </div>
+          </div>
+          <div class="details-container slide-in-right">
+            <img src="./assets/cs.png" alt="Experience icon" class="icon" />
+            <h3>Volunteer</h3>
+            <p>January - Present <br />Backend Javascript Developer<br />Scooter Lab - UTSA</p>
+            <div class="modelContainer">
+              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
+                Details>></div>
+              <div class="modal" id="modal">
+                <div class="modal-header">
+                  <div class="title">Backend Javascript Developer</div>
+                  <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                  January - Present<br>
+                  Scooter Lab - UTSA<br>
+                  Scooter Lab is an initiative to build a micro mobility research testbed, of
+                  dockless e-scooter vehicles that facilitates the real-time gathering of detailed
+                  research data. My role involves developing front-end features and back-end services to streamline data
+                  management and analysis of the research data, contributing significantly to the advancement of
+                  sustainable urban mobility solutions.<br>
 
-           <!-- Navigation buttons -->
-           <div class="swiper-button-next">
-              <i class="ri-arrow-right-s-line"></i>
-           </div>
-           
-           <div class="swiper-button-prev">
-              <i class="ri-arrow-left-s-line"></i>
-           </div>
-
-           <!-- Pagination -->
-           <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <div id="overlay"></div>
+            </div>
+          </div>
         </div>
-     </section>
-      
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+  </section>
 
-      <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-          <div class="contact-info-container">
-            <img
-              src="./assets/email.png"
-              alt="Email icon"
-              class="icon contact-icon email-icon"
-            />
-            <p><a href="mailto:christina@duthie.org">christina@duthie.org</a></p>
+  <section id="skills">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="skills-outer-container">
+        <div class="skills-inner-container">
+          <h2 class="experience-sub-title">Web Development</h2>
+          <div class="article-container">
+            <article class="article-skill">
+              <img src="./assets/html.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/css.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+
+            <article class="article-skill">
+              <img src="./assets/java-script.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>TypeScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/react.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
           </div>
-          <div class="contact-info-container">
-            <img
-              src="./assets/linkedin.png"
-              alt="LinkedIn icon"
-              class="icon contact-icon"
-            />
-            <p><a href="https://www.linkedin.com/in/christina-duthie/">LinkedIn</a></p>
+          <h2 class="experience-sub-title" style="margin-top: 30px;">Artificial Inteligence</h2>
+          <div class="article-container">
+            <article class="article-skill">
+              <img src="./assets/python.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Data Science</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/machinelearning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Machine Learning</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article class="article-skill">
+              <img src="./assets/deep-learning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Deep Learning</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
           </div>
         </div>
-      </section>
+
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#project'" />
+  </section>
+  <br>
+  <p class="section__text__p1" id="project">Browse My Recent</p>
+  <h1 class="title">Projects</h1>
+
+  <section class="container">
+    <div class="card__container swiper">
+      <div class="card__content">
+        <div class="swiper-wrapper">
 
 
-      <footer>
-        <nav>
-          <div class="nav-links-container">
-            <ul class="nav-links">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#project">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        <p>Copyright &#169; 2024 Christina Duthie.</p>
-      </footer>
-      <!--=============== SWIPER JS ===============-->
-      <script src="assets/js/swiper-bundle.min.js"></script>
+          <article class="card__article swiper-slide">
+            <section class="grid--container">
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/script.js"></script>
-      <script src="assets/js/main.js"></script>
-   </body>
+              <!-- 1 -->
+              <div class="grid--cell">
+                <article class="grid--item">
+
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"></div>
+                    </a>
+
+                    <div class="meta--container">
+                      <a href="#" class="issue">Issue XX</a>
+                      <a href="#" class="page">Deep Learning</a>
+                    </div>
+                  </div>
+
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">Malware Prediction App</a>
+                    </div>
+
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">Python</a></li>
+                        <li><a href="#" class="tag">Streamlit</a></li>
+                        <li><a href="#" class="tag">CNN</a></li>
+                        <li><a href="#" class="tag">EfficientNet</a></li>
+
+                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="hover--options">
+
+                      <a href="https://github.com/christinaduthie/malwaredetection" target="_blank" class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="https://christinaduthie-malwaredetection-app-wqupec.streamlit.app/" target="_blank" class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                  </div>
+
+                </article>
+              </div>
+            </section>
+          </article>
+          <article class="card__article swiper-slide">
+            <section class="grid--container">
+
+              <!-- 1 -->
+              <div class="grid--cell">
+                <article class="grid--item">
+
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"
+                        style="background-image: url('https://www.nyckel.com/assets/images/functions/sms.webp');"></div>
+                    </a>
+
+                    <div class="meta--container">
+                      <a href="#" class="issue">Issue XX</a>
+                      <a href="#" class="page">Machine Learning</a>
+                    </div>
+                  </div>
+
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">Sentiment Classifier App</a>
+                    </div>
+
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">Python</a></li>
+                        <li><a href="#" class="tag">Streamlit</a></li>
+                        <li><a href="#" class="tag">Nlp</a></li>
+                        <li><a href="#" class="tag">Random Forest</a></li>
+                        <li><a href="#" class="tag">seaborn</a></li>
+                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="hover--options">
+
+                      <a href="https://github.com/christinaduthie/sentimentanalysis" target="_blank" class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="https://sentimentanalysiscd.streamlit.app/" target="_blank" class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                  </div>
+
+                </article>
+              </div>
+            </section>
+          </article>
+          <article class="card__article swiper-slide">
+            <section class="grid--container">
+
+              <!-- 1 -->
+              <div class="grid--cell">
+                <article class="grid--item">
+
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"
+                        style="background-image: url('https://cdn.wallpaperdirect.com/asset/img/product/185728/full/isabelle-boxall-flight-of-monarchs-slate-wallpaper-0@lg.webp');">
+                      </div>
+                    </a>
+
+                    <div class="meta--container">
+                      <a href="#" class="issue">Issue XX</a>
+                      <a href="#" class="page">Data Science</a>
+                    </div>
+                  </div>
+
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">Decline in Pollinators</a>
+                    </div>
+
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">Python</a></li>
+                        <li><a href="#" class="tag">API</a></li>
+                        <li><a href="#" class="tag">Streamlit</a></li>
+                        <li><a href="#" class="tag">Seaborn</a></li>
+                        <li><a href="#" class="tag">Folium</a></li>
+                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="hover--options">
+
+                      <a href="https://github.com/christinaduthie/pollinator-decline-analysis" target="_blank" class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                  </div>
+
+                </article>
+              </div>
+            </section>
+          </article>
+          <article class="card__article swiper-slide">
+            <section class="grid--container">
+
+              <!-- 1 -->
+              <div class="grid--cell">
+                <article class="grid--item">
+
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"
+                        style="background-image: url('https://bsmart.agency/wp-content/uploads/2023/11/E-commerce-Web-Development-Services.webp');">
+                      </div>
+                    </a>
+
+                    <div class="meta--container">
+                      <a href="#" class="issue">Issue XX</a>
+                      <a href="#" class="page">Full Stack</a>
+                    </div>
+                  </div>
+
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">E-commerce Website</a>
+                    </div>
+
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">React</a></li>
+                        <li><a href="#" class="tag">HTML</a></li>
+                        <li><a href="#" class="tag">Css</a></li>
+                        <li><a href="#" class="tag">Javascript</a></li>
+                        <li><a href="#" class="tag">Node.js</a></li>
+                        <li><a href="#" class="tag">MongoDB</a></li>
+                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="hover--options">
+
+                      <a href="https://github.com/christinaduthie/ecommerce-website" target="_blank" class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+
+                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                    </div>
+                  </div>
+
+                </article>
+              </div>
+            </section>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next">
+        <i class="ri-arrow-right-s-line"></i>
+      </div>
+
+      <div class="swiper-button-prev">
+        <i class="ri-arrow-left-s-line"></i>
+      </div>
+
+      <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:christina@duthie.org">christina@duthie.org</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/christina-duthie/">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Christina Duthie.</p>
+  </footer>
+  <!--=============== SWIPER JS ===============-->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <!--=============== MAIN JS ===============-->
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active'); // Add 'active' class when in view
+          }
+        });
+      });
+
+      // Target all elements with the class 'details-container'
+      const elements = document.querySelectorAll('.details-container');
+      elements.forEach(element => {
+        observer.observe(element); // Observe each element
+      });
+    });
+  </script>
+
+</body>
+
 </html>
