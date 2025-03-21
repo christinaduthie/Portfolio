@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!--=============== REMIXICONS ===============-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="" />
 
   <!--=============== SWIPER CSS ===============-->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
   <!--=============== CSS ===============-->
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
-
 
   <title>Christina Duthie</title>
 </head>
 
 <body onload="document.body.style.opacity='1'">
+  <!--========== DESKTOP NAV (VERTICAL ON LEFT) ==========-->
   <nav id="desktop-nav">
-    <div>
-      <h2 class="logo">Christina Duthie</h2>
-    </div>
-    <!-- <div><img src="assets/logo.png" height="90px" width="80px"></div>
-         <div> -->
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="#profile">About</a></li>
+      <li><a href="#exprience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#project">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    </div>
   </nav>
+
+  <!--========== HAMBURGER NAV (shown on smaller screens) ==========-->
   <nav id="hamburger-nav">
-    <div class="logo">Christina Duthie</div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
@@ -50,12 +45,24 @@
       </div>
     </div>
   </nav>
-  <section id="profile">
 
+  <section id="profile">
     <div class="section__text ">
       <p class="section__text__p1 ">Hello, I'm</p>
       <h1 class="title">Christina Duthie</h1>
-      <p class="section__text__p2">Computer Science Enthusiast</p>
+      <p class="section__text__p2">Software Developer | Data Enthusiast</p>
+
+      <!--  ADDED class="profile-description" here -->
+      <p
+        class="profile-description"
+        style="text-align: center; width: 700px; font-weight: 100; font-size: medium; margin-bottom: 20px; line-height: 20px;"
+      >
+        Currently wrapping up my Master's in Computer Science at UTSA, I specialize in Full-stack development, AI-driven
+        solutions, and Data science. Passionate about building scalable and intelligent systems, I thrive on solving
+        complex problems, optimizing performance, and creating seamless digital experiences that drive real-world
+        impact.
+      </p>
+
       <div class="btn-container">
         <button class="btn btn-color-2" style="border-radius: 5px;" onclick="window.open('./assets/resume.pdf')">
           Resume
@@ -71,119 +78,107 @@
           onclick="location.href='https://github.com/christinaduthie'" />
       </div>
     </div>
-    <div class="section__pic-container  ">
+
+    <div class="section__pic-container">
       <img src="./assets/profile-pic.png" />
     </div>
   </section>
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-    <div class="section-container">
 
-      <div class="about-details-container">
-        <div class="text-container">
-          <p style="text-align: center;">
-            I am currently pursuing my Masters in Computer Science in University of Texas at San Antonio. I aim to learn
-            and land a stimulating effort in the field of computer science where I can apply my programming
-            skills, analytical thinking, and enthusiasm for technology to help create new and cutting-edge solutions.
-          </p>
+  <!--===== EXPERIENCE SECTION (UL with ID "experience-timeline") =====-->
+  <section id="exprience">
+    <p class="section__text__p1">My Journey</p>
+    <h1 class="title" style="margin-bottom: 90px;">Experience</h1>
+
+    <!-- New UL with distinct ID to avoid conflicts with your Project section -->
+    <ul id="experience-timeline">
+
+      <!-- Volunteer -->
+      <li style="--accent-color:#41516C">
+        <div class="date">Nov 2024- Present</div>
+        <div class="title">Volunteer (Scooter Lab - UTSA)</div>
+        <div class="descr">
+          Data Scientist<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalVol">Details>></span>
         </div>
-        <div class="about-containers">
-          <div class="details-container slide-in-left">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.tech Computer Science and Engineering<br />MS Computer Science (ongoing)</p>
-            <div class="modelContainer">
-              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
-                Details>></div>
-              <div class="modal" id="modal">
-                <div class="modal-header">
-                  <div class="title">Education</div>
-                  <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                  Undergraduate:<br>
-                  Bachelor of Technology in Computer Science and Engineering<br>
-                  Karunya Institute of Technology and Sciences, Coimbatore, India<br>
-                  2019 - 2023<br>
-                  Gpa: 8.11/10<br>
-                </div>
-              </div>
-              <div id="overlay"></div>
-            </div>
-
-          </div>
-          <div class="details-container slide-in-right ">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Internship</h3>
-            <p>Feb - Mar 2023 <br />Software Developer Trainee<br />ITOI Technologies</p>
-            <div class="modelContainer">
-              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
-                Details>></div>
-              <div class="modal" id="modal">
-                <div class="modal-header">
-                  <div class="title">Software Developer Trainee</div>
-                  <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                  Feb - Mar 2023<br>
-                  Into Impact Network Foundation<br>
-                </div>
-              </div>
-              <div id="overlay"></div>
-            </div>
-          </div>
-          <div class="details-container slide-in-left">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Internship</h3>
-            <p>June - July 2024 <br />Software Developer Trainee<br />Numentica UI</p>
-            <div class="modelContainer">
-              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
-                Details>></div>
-              <div class="modal" id="modal">
-                <div class="modal-header">
-                  <div class="title">Software Developer Trainee</div>
-                  <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                  Feb - Mar 2023<br>
-                  Numentica Ui<br>
-                </div>
-              </div>
-              <div id="overlay"></div>
-            </div>
-          </div>
-          <div class="details-container slide-in-right">
-            <img src="./assets/cs.png" alt="Experience icon" class="icon" />
-            <h3>Volunteer</h3>
-            <p>January - Present <br />Backend Javascript Developer<br />Scooter Lab - UTSA</p>
-            <div class="modelContainer">
-              <div data-modal-target="#modal" style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;">
-                Details>></div>
-              <div class="modal" id="modal">
-                <div class="modal-header">
-                  <div class="title">Backend Javascript Developer</div>
-                  <button data-close-button class="close-button">&times;</button>
-                </div>
-                <div class="modal-body">
-                  January - Present<br>
-                  Scooter Lab - UTSA<br>
-                  Scooter Lab is an initiative to build a micro mobility research testbed, of
-                  dockless e-scooter vehicles that facilitates the real-time gathering of detailed
-                  research data. My role involves developing front-end features and back-end services to streamline data
-                  management and analysis of the research data, contributing significantly to the advancement of
-                  sustainable urban mobility solutions.<br>
-
-                </div>
-              </div>
-              <div id="overlay"></div>
-            </div>
-          </div>
+      </li>
+      </li>
+      <!-- Volunteer -->
+      <li style="--accent-color:#FBCA3E">
+        <div class="date">Jan 2024- Present</div>
+        <div class="title">Volunteer (Scooter Lab - UTSA)</div>
+        <div class="descr">
+          Software Engineer<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalVol">Details>></span>
         </div>
-      </div>
-    </div>
+      </li>
+      <!-- Internship 1 -->
+      <li style="--accent-color:#E24A68">
+        <div class="date">June 2024</div>
+        <div class="title">Internship (Numentica UI)</div>
+        <div class="descr">
+          Data Scientist Trainee - AI/ML<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalInt2">Details>></span>
+        </div>
+      </li>
+      <!-- Internship 2 -->
+      <li style="--accent-color:#1B5F8C">
+        <div class="date">July 2024</div>
+        <div class="title">Internship (Numentica UI)</div>
+        <div class="descr">
+          Software Developer Trainee<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalInt2">Details>></span>
+        </div>
+      </li>
+      <!-- Part time -->
+      <li style="--accent-color:#b66539">
+        <div class="date">Sept 2023 - Present</div>
+        <div class="title">Part Time (UTSA)</div>
+        <div class="descr">
+          Teaching Assistant<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalInt2">Details>></span>
+        </div>
+      </li>
+      <!-- Internship 2 -->
+      <li style="--accent-color:#439035">
+        <div class="date">Feb - Mar 2023</div>
+        <div class="title">Internship (ITOI Technologies)</div>
+        <div class="descr">
+          Software Developer Trainee<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalInt1">Details>></span>
+        </div>
+
+        <!-- Education -->
+      <li style="--accent-color:#781747">
+        <div class="date"> 2023 - 2025 </div>
+        <div class="title"> Master of Science (Ongoing)</div>
+        <div class="descr">
+          Computer Science<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalEdu">Details>></span>
+        </div>
+      </li>
+      <!-- Education -->
+      <li style="--accent-color:#781747">
+        <div class="date"> 2019 - 2023</div>
+        <div class="title">Bachelor of Technology </div>
+        <div class="descr">
+          Computer Science and Engineering<br />
+          <span style="color: rgb(47, 47, 47); font-style: italic; cursor: pointer;"
+            data-modal-target="#aboutModalEdu">Details>></span>
+        </div>
+      </li>
+
+    </ul>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
   </section>
+  <!--===== END EXPERIENCE SECTION =====-->
+
 
   <section id="skills">
     <p class="section__text__p1">Explore My</p>
@@ -191,85 +186,344 @@
     <div class="experience-details-container">
       <div class="skills-outer-container">
         <div class="skills-inner-container">
-          <h2 class="experience-sub-title">Web Development</h2>
+          <h2 class="experience-sub-title">Software Development</h2>
           <div class="article-container">
             <article class="article-skill">
               <img src="./assets/html.png" alt="Experience icon" class="icon" />
-              <div>
-                <h3>HTML</h3>
-                <p>Experienced</p>
-              </div>
+              <h5>HTML</h5>
             </article>
             <article class="article-skill">
               <img src="./assets/css.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>CSS</h3>
-                <p>Experienced</p>
+                <h5>CSS</h5>
               </div>
             </article>
-
             <article class="article-skill">
               <img src="./assets/java-script.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>JavaScript</h3>
-                <p>Intermediate</p>
+                <h5>JavaScript</h5>
               </div>
             </article>
             <article class="article-skill">
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>TypeScript</h3>
-                <p>Basic</p>
+                <h5>TypeScript</h5>
               </div>
             </article>
             <article class="article-skill">
               <img src="./assets/react.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>React</h3>
-                <p>Intermediate</p>
+                <h5>React</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/c.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>C</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/cplus.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>C++</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/node-js.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Node.js</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/sql.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>SQL</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/streamlit.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Streamlit</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/git.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Git/GitHub</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>MySQL</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/api.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>API Development</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/api.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>RESTful APIs</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/postgresql.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>PostgreSQL</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/docker.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Docker</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/aws.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Amazon Web Services (AWS)</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/agile.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Agile Methodologies</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/bootstrap.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Bootstrap</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/databricks.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Databricks</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/CICD.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>CI/CD</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/OOP.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Object Oriented Programming</h5>
               </div>
             </article>
           </div>
-          <h2 class="experience-sub-title" style="margin-top: 30px;">Artificial Inteligence</h2>
+
+          <h2 class="experience-sub-title" style="margin-top: 30px;">
+            AI and Data Science Ecosystem
+          </h2>
           <div class="article-container">
             <article class="article-skill">
               <img src="./assets/python.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Python</h3>
-                <p>Intermediate</p>
+                <h5>Python</h5>
               </div>
             </article>
             <article class="article-skill">
               <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Data Science</h3>
-                <p>Intermediate</p>
+                <h5>Data Science</h5>
               </div>
             </article>
             <article class="article-skill">
               <img src="./assets/machinelearning.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Machine Learning</h3>
-                <p>Intermediate</p>
+                <h5>Machine Learning</h5>
               </div>
             </article>
-
             <article class="article-skill">
               <img src="./assets/deep-learning.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>Deep Learning</h3>
-                <p>Intermediate</p>
+                <h5>Deep Learning</h5>
               </div>
             </article>
-
+            <article class="article-skill">
+              <img src="./assets/pandas.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Pandas</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/numpy.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>NumPy</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/machinelearning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Seaborn</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/keras.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Keras</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/tensorflow.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>TensorFlow</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Matplotlib</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/machinelearning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>SciKit Learn</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/deep-learning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>PyTorch</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/tableau.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Tableau</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Power BI</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/natural-language-processing.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Natural Language Processing</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/deep-learning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Exploratory Data Analysis</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/predictive-chart.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Predictive Analytics</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Model Training & Evaluation</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/supervised.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Supervised Learning</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/unsupervised.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Unsupervised Learning</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/reinforcement-learning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Reinforcement Learning</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Deep Learning Models </h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/featureEngineering.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Feature engineering</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/computervision.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Computer Vision</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/computervision.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>OpenCV</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/data-science.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>RAG </h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/openAi.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Open AI</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/deep-learning.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Large Language Models (LLM)</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/genAi.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Generative AI</h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/msexcel.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>MS Excel </h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/google-colab.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Google Colab </h5>
+              </div>
+            </article>
+            <article class="article-skill">
+              <img src="./assets/jupyter.png" alt="Experience icon" class="icon" />
+              <div>
+                <h5>Jupyter Notebook </h5>
+              </div>
+            </article>
           </div>
         </div>
-
       </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#project'" />
   </section>
-  <br>
+
+  <br />
   <p class="section__text__p1" id="project">Browse My Recent</p>
   <h1 class="title">Projects</h1>
 
@@ -277,86 +531,269 @@
     <div class="card__container swiper">
       <div class="card__content">
         <div class="swiper-wrapper">
-
-
+          <!-- PROJECT 1 -->
           <article class="card__article swiper-slide">
             <section class="grid--container">
-
-              <!-- 1 -->
               <div class="grid--cell">
-                <article class="grid--item">
-
+                <article class="grid--item  ">
                   <div class="preview--container">
                     <a href="#" class="preview-image--container">
-                      <div class="preview-image"></div>
+                      <div class="preview-image"
+                      style="
+                        background-image: url('https://cfotech.asia/uploads/story/2022/10/05/GettyImages-1334591614.webp');
+                      "></div>
                     </a>
-
                     <div class="meta--container">
                       <a href="#" class="issue">Completed</a>
                       <a href="#" class="page">Deep Learning</a>
                     </div>
                   </div>
-
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">SWallet - Fintech App</a>
+                    </div>
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">Javascript</a></li>
+                        <li><a href="#" class="tag">React</a></li>
+                        <li><a href="#" class="tag">CSS</a></li>
+                        <li><a href="#" class="tag">Prisma</a></li>
+                        <li><a href="#" class="tag">PostgresSQL</a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="hover--options">
+                      <a href="https://github.com/christinaduthie/swallet" target="_blank"
+                        class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <!-- New modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+                      <a href="https://christinaduthie-malwaredetection-app-wqupec.streamlit.app/" target="_blank"
+                        class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <!-- Same new modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject1">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 1 -->
+                        <div class="modal" id="modalProject1">
+                          <div class="modal-header">
+                            <div class="title">Malware Prediction App</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=Malware+Prediction+App+Details"
+                              alt="Malware Prediction" style="width: 100%; height: auto;" />
+                            <p>
+                              This deep learning project leverages CNN
+                              architectures like EfficientNet to analyze malware
+                              images and predict malicious files. A Streamlit web
+                              app provides a user-friendly interface for real-time
+                              demonstrations.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </article>
+           <!-- PROJECT 2 -->
+           <article class="card__article swiper-slide">
+            <section class="grid--container">
+              <div class="grid--cell">
+                <article class="grid--item">
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"
+                        style="
+                          background-image: url('https://www.tarlogic.com/wp-content/uploads/2024/02/Tipos-de-malware.webp');
+                        "></div>
+                    </a>
+                    <div class="meta--container">
+                      <a href="#" class="issue">Completed</a>
+                      <a href="#" class="page">Deep Learning</a>
+                    </div>
+                  </div>
                   <div class="content--container">
                     <div class="title--container">
                       <a class="title--text" href="#">Malware Prediction App</a>
                     </div>
-
                     <div class="tags--overflow-container">
                       <ul class="tags--container">
                         <li><a href="#" class="tag">Python</a></li>
                         <li><a href="#" class="tag">Streamlit</a></li>
                         <li><a href="#" class="tag">CNN</a></li>
                         <li><a href="#" class="tag">EfficientNet</a></li>
-
-                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
                       </ul>
                     </div>
-
                     <div class="hover--options">
-
-                      <a href="https://github.com/christinaduthie/malwaredetection" target="_blank" class="series button">
+                      <a href="https://github.com/christinaduthie/malwaredetection" target="_blank"
+                        class="series button">
                         <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <!-- New modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
-                      <a href="https://christinaduthie-malwaredetection-app-wqupec.streamlit.app/" target="_blank" class="latest button">
+                      <a href="https://christinaduthie-malwaredetection-app-wqupec.streamlit.app/" target="_blank"
+                        class="latest button">
                         <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <!-- Same new modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
-                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject1">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 1 -->
+                        <div class="modal" id="modalProject1">
+                          <div class="modal-header">
+                            <div class="title">Malware Prediction App</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=Malware+Prediction+App+Details"
+                              alt="Malware Prediction" style="width: 100%; height: auto;" />
+                            <p>
+                              This deep learning project leverages CNN
+                              architectures like EfficientNet to analyze malware
+                              images and predict malicious files. A Streamlit web
+                              app provides a user-friendly interface for real-time
+                              demonstrations.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
                     </div>
                   </div>
-
                 </article>
               </div>
             </section>
           </article>
+          <!-- PROJECT 2 -->
           <article class="card__article swiper-slide">
             <section class="grid--container">
-
-              <!-- 1 -->
               <div class="grid--cell">
                 <article class="grid--item">
-
                   <div class="preview--container">
                     <a href="#" class="preview-image--container">
                       <div class="preview-image"
-                        style="background-image: url('https://www.nyckel.com/assets/images/functions/sms.webp');"></div>
+                        style="
+                          background-image: url('https://img.goodfon.com/wallpaper/big/6/78/kod-dvoichnyi-kod-nuli-edinitsy-programmirovanie-binarnyi.webp');
+                        "></div>
                     </a>
+                    <div class="meta--container">
+                      <a href="#" class="issue">Ongoing</a>
+                      <a href="#" class="page">Algorithms</a>
+                    </div>
+                  </div>
+                  <div class="content--container">
+                    <div class="title--container">
+                      <a class="title--text" href="#">AlgoWiz</a>
+                    </div>
+                    <div class="tags--overflow-container">
+                      <ul class="tags--container">
+                        <li><a href="#" class="tag">React</a></li>
+                        <li><a href="#" class="tag">CSS</a></li>
+                        <li><a href="#" class="tag">Data Structures</a></li>
+                        <li><a href="#" class="tag">Algorithms</a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="hover--options">
+                      <a href="https://github.com/christinaduthie/algowiz" target="_blank"
+                        class="series button">
+                        <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
+                        <!-- New modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+                      <a href="https://christinadhttps://github.com/christinaduthie/algowiz" target="_blank"
+                        class="latest button">
+                        <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
+                        <!-- Same new modal for new-tab icon -->
+                        <span class="new-tab" data-modal-target="#modalProject1NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
+                      </a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject1">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 1 -->
+                        <div class="modal" id="modalProject1">
+                          <div class="modal-header">
+                            <div class="title">Malware Prediction App</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=Malware+Prediction+App+Details"
+                              alt="Malware Prediction" style="width: 100%; height: auto;" />
+                            <p>
+                              This deep learning project leverages CNN
+                              architectures like EfficientNet to analyze malware
+                              images and predict malicious files. A Streamlit web
+                              app provides a user-friendly interface for real-time
+                              demonstrations.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </article>
 
+          <!-- PROJECT 2 -->
+          <article class="card__article swiper-slide">
+            <section class="grid--container">
+              <div class="grid--cell">
+                <article class="grid--item">
+                  <div class="preview--container">
+                    <a href="#" class="preview-image--container">
+                      <div class="preview-image"
+                        style="
+                          background-image: url('https://www.nyckel.com/assets/images/functions/sms.webp');
+                        "></div>
+                    </a>
                     <div class="meta--container">
                       <a href="#" class="issue">Completed</a>
                       <a href="#" class="page">Machine Learning</a>
                     </div>
                   </div>
-
                   <div class="content--container">
                     <div class="title--container">
                       <a class="title--text" href="#">Sentiment Classifier App</a>
                     </div>
-
                     <div class="tags--overflow-container">
                       <ul class="tags--container">
                         <li><a href="#" class="tag">Python</a></li>
@@ -364,55 +801,77 @@
                         <li><a href="#" class="tag">Nlp</a></li>
                         <li><a href="#" class="tag">Random Forest</a></li>
                         <li><a href="#" class="tag">seaborn</a></li>
-                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
                       </ul>
                     </div>
-
                     <div class="hover--options">
-
-                      <a href="https://github.com/christinaduthie/sentimentanalysis" target="_blank" class="series button">
+                      <a href="https://github.com/christinaduthie/sentimentanalysis" target="_blank"
+                        class="series button">
                         <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject2NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
                       <a href="https://sentimentanalysiscd.streamlit.app/" target="_blank" class="latest button">
                         <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject2NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
-                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject2">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 2 -->
+                        <div class="modal" id="modalProject2">
+                          <div class="modal-header">
+                            <div class="title">Sentiment Classifier App</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=Sentiment+Classifier+App+Details"
+                              alt="Sentiment Classifier" style="width: 100%; height: auto;" />
+                            <p>
+                              A text classification application that analyzes user
+                              input and classifies sentiment as positive or
+                              negative using a Random Forest model. Built with
+                              Streamlit for simplicity and efficiency.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
                     </div>
                   </div>
-
                 </article>
               </div>
             </section>
           </article>
+
+          <!-- PROJECT 3 -->
           <article class="card__article swiper-slide">
             <section class="grid--container">
-
-              <!-- 1 -->
               <div class="grid--cell">
                 <article class="grid--item">
-
                   <div class="preview--container">
                     <a href="#" class="preview-image--container">
                       <div class="preview-image"
-                        style="background-image: url('https://cdn.wallpaperdirect.com/asset/img/product/185728/full/isabelle-boxall-flight-of-monarchs-slate-wallpaper-0@lg.webp');">
-                      </div>
+                        style="
+                          background-image: url('https://cdn.wallpaperdirect.com/asset/img/product/185728/full/isabelle-boxall-flight-of-monarchs-slate-wallpaper-0@lg.webp');
+                        "></div>
                     </a>
-
                     <div class="meta--container">
                       <a href="#" class="issue">Ongoing</a>
                       <a href="#" class="page">Data Science</a>
                     </div>
                   </div>
-
                   <div class="content--container">
                     <div class="title--container">
                       <a class="title--text" href="#">Decline in Pollinators</a>
                     </div>
-
                     <div class="tags--overflow-container">
                       <ul class="tags--container">
                         <li><a href="#" class="tag">Python</a></li>
@@ -420,88 +879,133 @@
                         <li><a href="#" class="tag">Streamlit</a></li>
                         <li><a href="#" class="tag">Seaborn</a></li>
                         <li><a href="#" class="tag">Folium</a></li>
-                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
                       </ul>
                     </div>
-
                     <div class="hover--options">
-
-                      <a href="https://github.com/christinaduthie/pollinator-decline-analysis" target="_blank" class="series button">
+                      <a href="https://github.com/christinaduthie/pollinator-decline-analysis" target="_blank"
+                        class="series button">
                         <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject3NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
                       <a href="#" class="latest button">
                         <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject3NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
-                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject3">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 3 -->
+                        <div class="modal" id="modalProject3">
+                          <div class="modal-header">
+                            <div class="title">Decline in Pollinators</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=Pollinator+Decline+Analysis"
+                              alt="Pollinator Decline" style="width: 100%; height: auto;" />
+                            <p>
+                              An ongoing data science project analyzing pollinator
+                              population decline using global datasets and APIs.
+                              Features exploratory data analysis and interactive
+                              visualizations with Streamlit and Folium.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
                     </div>
                   </div>
-
                 </article>
               </div>
             </section>
           </article>
+
+          <!-- PROJECT 4 -->
           <article class="card__article swiper-slide">
             <section class="grid--container">
-
-              <!-- 1 -->
               <div class="grid--cell">
                 <article class="grid--item">
-
                   <div class="preview--container">
                     <a href="#" class="preview-image--container">
                       <div class="preview-image"
-                        style="background-image: url('https://bsmart.agency/wp-content/uploads/2023/11/E-commerce-Web-Development-Services.webp');">
-                      </div>
+                        style="
+                          background-image: url('https://jasonstcyr.com/wp-content/uploads/2024/05/not-a-robot.webp?w=1024');
+                        "></div>
                     </a>
-
                     <div class="meta--container">
                       <a href="#" class="issue">Ongoing</a>
                       <a href="#" class="page">Full Stack</a>
                     </div>
                   </div>
-
                   <div class="content--container">
                     <div class="title--container">
-                      <a class="title--text" href="#">E-commerce Website</a>
+                      <a class="title--text" href="#">RETROMATE - AI Assistant</a>
                     </div>
-
                     <div class="tags--overflow-container">
                       <ul class="tags--container">
-                        <li><a href="#" class="tag">React</a></li>
                         <li><a href="#" class="tag">HTML</a></li>
                         <li><a href="#" class="tag">Css</a></li>
                         <li><a href="#" class="tag">Javascript</a></li>
-                        <li><a href="#" class="tag">Node.js</a></li>
-                        <li><a href="#" class="tag">MongoDB</a></li>
-                        <li><a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a></li>
+                        <li><a href="#" class="tag">Open Ai API</a></li>
+                        <li><a href="#" class="tag">Python</a></li>
+                        <li>
+                          <a href="#" class="tag ellipsis"><i class="far fa-ellipsis-h"></i></a>
+                        </li>
                       </ul>
                     </div>
-
                     <div class="hover--options">
-
-                      <a href="https://github.com/christinaduthie/ecommerce-website" target="_blank" class="series button">
+                      <a href="https://github.com/christinaduthie/ecommerce-website" target="_blank"
+                        class="series button">
                         <span class="icon-title"><i class="fad fa-books"></i> GitHub</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject4NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
                       <a href="#" class="latest button">
                         <span class="icon-title"><i class="far fa-image"></i> Live Demo</span>
-                        <span class="new-tab"><i class="fas fa-arrow-circle-right"></i></span>
+                        <span class="new-tab" data-modal-target="#modalProject4NewTab"><i
+                            class="fas fa-arrow-circle-right"></i></span>
                       </a>
-
-                      <a href="#" class="follow button"><i class="ri-arrow-right-line"></i></a>
+                      <!-- Existing "Read More" trigger -->
+                      <div class="modelContainer">
+                        <a href="#" class="follow button" data-modal-target="#modalProject4">
+                          <i class="ri-arrow-right-line"></i>
+                        </a>
+                        <!-- Existing POPUP MODAL FOR PROJECT 4 -->
+                        <div class="modal" id="modalProject4">
+                          <div class="modal-header">
+                            <div class="title">E-commerce Website</div>
+                            <button data-close-button class="close-button">
+                              &times;
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="https://via.placeholder.com/500x300?text=E-commerce+Website+Details"
+                              alt="E-commerce Website" style="width: 100%; height: auto;" />
+                            <p>
+                              A full-stack React, Node.js, and MongoDB application
+                              under development. Provides user authentication,
+                              product listings, shopping cart functionality, and a
+                              smooth checkout experience.
+                            </p>
+                          </div>
+                        </div>
+                        <!-- End existing -->
+                      </div>
                     </div>
                   </div>
-
                 </article>
               </div>
             </section>
           </article>
-
         </div>
       </div>
 
@@ -509,16 +1013,13 @@
       <div class="swiper-button-next">
         <i class="ri-arrow-right-s-line"></i>
       </div>
-
       <div class="swiper-button-prev">
         <i class="ri-arrow-left-s-line"></i>
       </div>
-
       <!-- Pagination -->
       <div class="swiper-pagination"></div>
     </div>
   </section>
-
 
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
@@ -526,53 +1027,156 @@
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:christina@duthie.org">christina@duthie.org</a></p>
+        <p><a href="mailto:christinarduthie@gmail.com">christinarduthie@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
         <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p><a href="https://www.linkedin.com/in/christina-duthie/">LinkedIn</a></p>
+        <p>
+          <a href="https://www.linkedin.com/in/christina-duthie/">
+            LinkedIn
+          </a>
+        </p>
       </div>
     </div>
   </section>
 
-
   <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#project">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <nav id="desktop-nav">
+      <ul class="nav-links">
+        <li><a href="#profile">About</a></li>
+        <li><a href="#exprience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#project">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
     <p>Copyright &#169; 2024 Christina Duthie.</p>
   </footer>
+
   <!--=============== SWIPER JS ===============-->
   <script src="assets/js/swiper-bundle.min.js"></script>
 
   <!--=============== MAIN JS ===============-->
   <script src="assets/js/script.js"></script>
   <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active'); // Add 'active' class when in view
-          }
-        });
-      });
 
-      // Target all elements with the class 'details-container'
-      const elements = document.querySelectorAll('.details-container');
-      elements.forEach(element => {
-        observer.observe(element); // Observe each element
-      });
-    });
-  </script>
+  <!--======= SHARED OVERLAY FOR ALL MODALS =======-->
+  <div id="overlay"></div>
 
+  <!--=== NEW MODALS FOR "DETAILS>>" IN ABOUT (DUMMY TEXT) ===-->
+  <div class="modal" id="aboutModalEdu">
+    <div class="modal-header">
+      <div class="title">Education</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dummy text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aliquam quis sapien at lorem congue pretium.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="aboutModalInt1">
+    <div class="modal-header">
+      <div class="title">Internship (ITOI Technologies)</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dummy text: Donec in nisl ac ipsum pulvinar convallis. Donec vel nulla
+        in turpis tempor vehicula non quis dui.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="aboutModalInt2">
+    <div class="modal-header">
+      <div class="title">Internship (Numentica UI)</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dummy text: Fusce quis sapien diam. Sed nec lorem lacinia, interdum
+        ante quis, euismod arcu.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="aboutModalVol">
+    <div class="modal-header">
+      <div class="title">Volunteer (Scooter Lab)</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <p>
+        Dummy text: Aenean mattis ipsum vel tincidunt cursus. Pellentesque
+        luctus arcu eros, vel tempus risus rhoncus eget.
+      </p>
+    </div>
+  </div>
+
+  <!--=== NEW MODALS FOR "new-tab" ICONS IN PROJECTS (DUMMY TEXT + IMAGE) ===-->
+  <div class="modal" id="modalProject1NewTab">
+    <div class="modal-header">
+      <div class="title">Malware Prediction App - Extra Info</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="https://via.placeholder.com/600x300?text=Malware+Prediction+New-Tab+Modal"
+        style="width: 100%; height: auto;" alt="Malware Additional" />
+      <p>
+        Dummy text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+        finibus, nisl nec aliquam vestibulum, nulla purus lobortis metus, sed
+        dapibus nisl ligula vel lacus.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="modalProject2NewTab">
+    <div class="modal-header">
+      <div class="title">Sentiment Classifier App - Extra Info</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="https://via.placeholder.com/600x300?text=Sentiment+Classifier+New-Tab+Modal"
+        style="width: 100%; height: auto;" alt="Sentiment Additional" />
+      <p>
+        Dummy text: Sed euismod malesuada neque. Praesent eget nisl ante. Duis
+        volutpat finibus urna, eu scelerisque leo euismod ac.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="modalProject3NewTab">
+    <div class="modal-header">
+      <div class="title">Decline in Pollinators - Extra Info</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="https://via.placeholder.com/600x300?text=Pollinators+New-Tab+Modal" style="width: 100%; height: auto;"
+        alt="Pollinators Additional" />
+      <p>
+        Dummy text: Vivamus quis porta ex, in ullamcorper nibh. Phasellus gravida
+        sem vel orci posuere vehicula.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal" id="modalProject4NewTab">
+    <div class="modal-header">
+      <div class="title">E-commerce Website - Extra Info</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      <img src="https://via.placeholder.com/600x300?text=Ecommerce+New-Tab+Modal" style="width: 100%; height: auto;"
+        alt="Ecommerce Additional" />
+      <p>
+        Dummy text: Nam quis turpis luctus, varius orci a, placerat mauris.
+        Pellentesque dignissim massa ut efficitur sollicitudin.
+      </p>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
 </body>
-
 </html>
